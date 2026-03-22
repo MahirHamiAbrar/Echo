@@ -1,4 +1,4 @@
-# echo
+# server
 
 To install dependencies:
 

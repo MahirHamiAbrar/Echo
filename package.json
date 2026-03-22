@@ -1,34 +1,23 @@
 {
-  "name": "webmeet",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
+  "name": "echo",
+  "module": "index.ts",
+  "type": "module",
+  "workspaces": [
+    "packages/server",
+    "packages/client"
+  ],
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.0",
-    "tailwindcss": "^4",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
     "typescript": "^5"
   },
-  "ignoreScripts": [
-    "sharp",
-    "unrs-resolver"
-  ],
-  "trustedDependencies": [
-    "sharp",
-    "unrs-resolver"
-  ]
+  "scripts": {
+    "dev-hot": "bun run --parallel --filter '*' dev hot",
+    "dev-watch": "bun run --parallel --filter '*' dev watch",
+    "build": "bun run --parallel --filter '*' build",
+    "prod": "bun run build && bun run --parallel --filter '*' prod",
+    "start": "bun prod",
+    "clean": "rm -rf node_modules packages/server/node_modules packages/client/node_modules bun.lockb packages/server/bun.lockb packages/client/bun.lockb"
+  }
 }
