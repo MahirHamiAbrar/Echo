@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "usernamehw.errorlens",
+    "esbenp.prettier-vscode",
+    "ms-vscode.js-debug",
+    "ms-vscode-remote.remote-containers"
+  ]
+}

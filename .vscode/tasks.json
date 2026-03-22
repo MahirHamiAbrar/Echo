@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Terminal: Root",
+      "type": "shell",
+      "command": "bash",
+      "args": ["scripts/start-root.sh"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Terminal: Server",
+      "type": "shell",
+      "command": "bash",
+      "args": ["scripts/start-server.sh"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Terminal: Client",
+      "type": "shell",
+      "command": "bash",
+      "args": ["scripts/start-client.sh"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Terminals: Open All",
+      "type": "shell",
+      "command": "echo",
+      "args": ["Opening all terminals..."],
+      "dependsOn": ["Terminal: Server", "Terminal: Client", "Terminal: Root"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent"
+      }
+    }
+  ]
+}
