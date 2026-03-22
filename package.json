@@ -17,7 +17,8 @@
     "dev-watch": "bun run --parallel --filter '*' dev watch",
     "build": "bun run --parallel --filter '*' build",
     "prod": "bun run build && bun run --parallel --filter '*' prod",
-    "start": "bun prod",
-    "clean": "rm -rf node_modules packages/server/node_modules packages/client/node_modules bun.lockb packages/server/bun.lockb packages/client/bun.lockb"
+    "start": "bun run prod",
+    "root-clean": "rm -rf node_modules bun.lockb",
+    "clean": "bun run root-clean && bun run --parallel --filter '*' clean"
   }
 }

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prod": "bun run start",
+    "prod": "bun run build && bun run start",
+    "clean": "rm -rf node_modules bun.lockb",
     "lint": "eslint"
   },
   "dependencies": {

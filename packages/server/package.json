@@ -10,9 +10,10 @@
     "typescript": "^5"
   },
   "scripts": {
-    "hot": "bun run --hot index.ts",
-    "watch": "bun run --watch index.ts",
-    "prod": "bun run index.ts",
-    "start": "bun run prod"
+    "hot":    "bun run --hot index.ts",
+    "watch":  "bun run --watch index.ts",
+    "start":  "bun run index.ts",
+    "prod":   "bun run start",
+    "clean": "rm -rf node_modules bun.lockb"
   }
 }
